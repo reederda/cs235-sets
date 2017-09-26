@@ -30,19 +30,19 @@ int main(int argc, char *argv[]) {
     outputFile.open("argv[1]_set.txt", ofstream::out);
 
     // read the input file write it to the output file
-    while ( inputFile.peek() != EOF ) {
+/*    while ( inputFile.peek() != EOF ) {
         //getline(inputFile, outString);
         outString.insert(input);
 	//outputFile << outString << endl;
-	outputFile.write(outString, 15);
+	//outputFile.write(outString, "file.txt");
     }
-
+*/
     inputFile.close();
     outputFile.close();
 
-    cout << "A new file named " << argv[1] 
-	<< "_set.txt has been created."
-	<< endl;
+//    cout << "A new file named " << argv[1] 
+//	<< "_set.txt has been created."
+//	<< endl;
 
     return 0;
 }
