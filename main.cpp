@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
     string input;
     // open an output file
     ofstream outputFile;
-    outputFile.open("argv[1]_set.txt", ofstream::out);
+    outputFile.open("output.txt", ofstream::out);
 
     // read the input file write it to the output file
 /*    while ( inputFile.peek() != EOF ) {
