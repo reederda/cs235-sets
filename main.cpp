@@ -55,16 +55,32 @@ int main(int argc, char *argv[]) {
 	{
            input[i] = tolower(input[i]);
 	}
-
+	//PART 1
 	outString.insert(input);
-    //cout << input << endl;
 
+	for (set<string>::iterator it=outString.begin(); 
+	     it!=outString.end(); it++)
+{
+	cout << *it << endl;
+//	wordmap2[state2].push_back(*it);
+	//outputFile << *it << endl;
+
+}	
+
+	//PART 2
+	outVector.push_back(input);
+	
+	//PART 3
+	wordmap[previous] = input;
+	previous = input;
+
+
+
+    
+	//cout << input << endl;
         //outString.insert(input);
 	//outputFile << outString << endl;
 	//outputFile.write(outString, "file.txt");
-	outVector.push_back(input);
-	wordmap[previous] = input;
-	previous = input;
     }
 
 
@@ -134,8 +150,6 @@ state3.push_back("");
 
 for (int i = 0; i < 100; i++)
 {
-//	if (wordmap3.count(state3))
-//	cout << "ERROR\n";
 	int ind = rand() % wordmap3[state3].size();
 
 
@@ -144,8 +158,6 @@ for (int i = 0; i < 100; i++)
 	state3.pop_front();
 }
 cout << endl;
-
-
 
 //    cout << "A new file named " << argv[1] 
 //	<< "_set.txt has been created."
