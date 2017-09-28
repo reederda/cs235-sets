@@ -59,10 +59,11 @@ int main(int argc, char *argv[]) {
 	outString.insert(input);
 
 	for (set<string>::iterator it=outString.begin(); 
-	     it!=outString.end(); it++)
+	     *it!=*outString.end(); it++)
 {
 	cout << *it << endl;
-//	wordmap2[state2].push_back(*it);
+	cout << *outString.begin();
+
 	//outputFile << *it << endl;
 
 }	
@@ -77,7 +78,7 @@ int main(int argc, char *argv[]) {
 
 
     
-	//cout << input << endl;
+	cout << input << endl;
         //outString.insert(input);
 	//outputFile << outString << endl;
 	//outputFile.write(outString, "file.txt");
