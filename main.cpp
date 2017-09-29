@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 
 // open an output file for part 1
 ofstream outputFile1;
-outputFile1.open("output1.txt", ofstream::out);
+outputFile1.open(std::string(argv[1]) + "_set.txt");
 for (string s : wordSet)
 {
  outputFile1 << s << endl;
@@ -72,7 +72,7 @@ outputFile1.close();
 
 // open an output file for part 2
 ofstream outputFile2;
-outputFile2.open("output2.txt", ofstream::out);
+outputFile2.open(std::string(argv[1]) + "_vector.txt");
 for (string s : wordVector)
 {
  outputFile2 << s << endl;
@@ -81,7 +81,7 @@ outputFile2.close();
 
 // open an output file for part 3
 ofstream outputFile3;
-outputFile3.open("output3.txt", ofstream::out);
+outputFile3.open(std::string(argv[1]) + "_1_1.txt");
 map<string, string>::iterator filemap;
 for (filemap = wordmap.begin(); filemap != wordmap.end(); filemap++)
 {
